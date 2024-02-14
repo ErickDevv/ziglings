@@ -22,8 +22,11 @@
 const std = @import("std");
 
 pub fn main() void {
-    const a: u8 = 12;
-    const b: *const u8 = &a; // fix this!
+    const Const: u8 = 12;
+    var Var: u8 = 12;
 
-    std.debug.print("a: {}, b: {}\n", .{ a, b.* });
+    const a: *const u8 = &Const;
+    const b: *const u8 = &Var;
+
+    std.debug.print("a: {}, b: {}\n", .{ a.*, b.* });
 }
