@@ -16,6 +16,7 @@
 //
 // ------------------------------------------------------------
 //
+
 // Why do we bother using a zero/null sentinel to terminate
 // strings in Zig when we already have a known length?
 //
@@ -60,7 +61,7 @@ pub fn main() void {
     // length... You've actually solved this problem before!
     //
     // Here's a big hint: do you remember how to take a slice?
-    const printable = ???;
+    const printable = foo.data[0..foo.length];
 
     print("{s}\n", .{printable});
 }
